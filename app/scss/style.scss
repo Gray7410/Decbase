@@ -3,3 +3,49 @@
 @import "fonts";
 @import "global";
 
+.header {
+	&__menu {
+		height: 47px;
+		padding-top: 34px;
+		padding-bottom: 94px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+}
+
+.header-nav {
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		list-style: none;
+	}
+	&__item {
+		padding-left: 44px;
+	}
+	&__link {
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 22px;
+		text-transform: uppercase;
+		text-decoration: none;
+		color: #000000;
+		&:hover {
+			color: #646464;
+		}
+	}
+	&__btn {
+		display: block;
+		min-width: 97px;
+		height: 32px;
+		background: #CAA892;
+		border-radius: 15px 0px;
+		text-align: center;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 16px;
+		line-height: 32px;
+		color: #ffffff;
+	}
+}
