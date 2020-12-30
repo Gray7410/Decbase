@@ -16,6 +16,7 @@ h1,h2,h3,h4,h5,h6 {
 }
 
 .block {
+	padding-bottom: 150px;
 	&__inner {
 		display: flex;
 		justify-content: space-between;
@@ -39,8 +40,8 @@ h1,h2,h3,h4,h5,h6 {
 	}
 	&__btn {
 		display: inline-block;
+		padding: 0 20px;
 		margin-top: 46px;
-		min-width: 97px;
 		height: 42px;
 		background:#37806B;
 		border-radius: 20px 0px;
