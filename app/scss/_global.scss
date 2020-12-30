@@ -5,8 +5,55 @@ body {
 	color: #646464;
 }
 
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+}
+
 .inner {
 	max-width: 1401px;
 	margin: 0 auto;
 	padding: 0 10px;
+}
+
+.block {
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__subtitle {
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 27px;
+		text-transform: uppercase;
+	}
+	&__title {
+		font-weight: 500;
+		font-size: 48px;
+		line-height: 57px;
+		color: #212121;
+	}
+	&__text {
+		padding-top: 23px;
+		max-width: 544px;
+	}
+	&__btn {
+		display: inline-block;
+		margin-top: 46px;
+		min-width: 97px;
+		height: 42px;
+		background:#37806B;
+		border-radius: 20px 0px;
+		text-align: center;
+		text-decoration: none;
+		font-weight: 600;
+		font-size: 18px;
+		line-height: 40px;
+		color: #ffffff;
+	}
+	&__img {
+		border: 2px solid #B0855B;
+		box-sizing: border-box;
+		border-radius: 140px 0px;
+	}
 }
