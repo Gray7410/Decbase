@@ -335,3 +335,97 @@
 		border-radius: 0px 0px 20px 0px;
 	}
 }
+.footer {
+	padding-top: 93px;
+	background: #F8F8F8;
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	&__logo {
+		max-width: 350px;
+	}
+	&__text {
+		padding-top: 15px;
+		margin: 0;
+	}
+	&__menu {
+		padding-right: 10px;
+		padding-bottom: 69px;
+	}
+	&__line {
+		margin: 0 auto;
+		max-width: 100%;
+		height: 0;
+		border-top: 1px solid #C4C4C4;
+	}
+	&__copyright {
+		margin: 0;
+		padding-top: 15px;
+		padding-bottom: 22px;
+		text-align: center;
+		a {
+			color:#37806B;
+			text-decoration: none;
+		}
+	}
+}
+
+.footer-menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	&__title {
+		padding-bottom: 15px;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 40px;
+		color: #212121;
+	}
+	&__item {
+		padding-top: 10px;
+	}
+	&__link {
+		text-decoration: none;
+		color: #646464;
+	}
+}
+
+.footer-social {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	&__link {
+		display: block;
+		margin-right: 8px;
+		width: 37px;
+		height: 37px;
+		background: #D5D5D5;
+		border-radius: 50%;
+		&:hover {
+			background: #37806B;
+		}
+	}
+	&__fb {
+		position: relative;
+		top: 7px;
+		left: 7px;
+	}
+	&__twitter {
+		position: relative;
+		top: 7px;
+		left: 8px;
+	}
+	&__instagram {
+		position: relative;
+		top: 6px;
+		left: 9px;
+	}
+	&__linkedin {
+		position: relative;
+		top: 7px;
+		left: 8px;
+	}
+}
