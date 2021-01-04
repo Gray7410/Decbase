@@ -1,8 +1,10 @@
 $(function(){
-
-
-
-  
+	$('.service-slider__list').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		prevArrow: '<a class="service-slider__arrow service-slider__arrow--left" href="#"></a>',
+		nextArrow: '<a class="service-slider__arrow service-slider__arrow--right" href="#"></a>',
+	});
 });
 
 const menuToggle = document.querySelector("#menu-toggle");
