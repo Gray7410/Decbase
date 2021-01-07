@@ -50,7 +50,7 @@
 		display: block;
 		min-width: 97px;
 		height: 32px;
-		background: #CAA892;
+		background: #caa892;
 		border-radius: 15px 0px;
 		text-align: center;
 		text-decoration: none;
@@ -61,12 +61,25 @@
 	}
 }
 
+.slick-current {
+	.service-slider__item {
+		background-color: #caa892;
+		color: #ffffff;
+		transition: ease 0.5s;
+	}
+	.service-slider__title {
+		color: #ffffff;
+	}
+	#slider-logo {
+		fill: #ffffff;
+	}
+}
+
 .service-slider {
 	&__inner {
 		position: relative;
 	}
 	&__arrows {
-		position: absolute;
 		top: 90px;
 		right: 0;
 		width: 78px;
@@ -75,15 +88,15 @@
 	}
 	&__arrow {
 		display: block;
-		width: 30px;
+		min-width: 30px;
 		height: 29px;
 		border-radius: 50%;
-		background: #FFFFFF;
+		background: #ffffff;
 		box-shadow: -1px 3px 10px rgba(0, 0, 0, 0.3);
 		&--left {
 			position: relative;
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 11px;
 				left: 13px;
@@ -97,7 +110,7 @@
 		&--right {
 			position: relative;
 			&::before {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 11px;
 				left: 11px;
@@ -110,6 +123,7 @@
 		}
 	}
 	&__list {
+		padding: 0;
 		padding-top: 50px;
 		padding-bottom: 204px;
 		display: flex;
@@ -118,29 +132,27 @@
 		min-width: 0;
 	}
 	&__item {
-		display: flex;
-		align-items: start;
+		// display: flex;
+		// align-items: start;
 		padding-top: 40px;
 		padding-left: 37px;
 		box-sizing: border-box;
-		max-width: 425px;
+		margin: 22px;
+		max-width: 395px;
 		min-height: 193px;
 		box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
 		border-radius: 60px 0px;
-		&--active {
-			background: #CAA892;
-			color: #FFFFFF;
-		}
 	}
 	&__info {
-		padding-left: 20px;
+		padding-left: 60px;
+		margin-top: -40px;
 	}
 	&__title {
 		font-size: 24px;
 		line-height: 16px;
 		color: #212121;
 		&--active {
-			color: #FFFFFF;
+			color: #ffffff;
 		}
 	}
 	&__text {
@@ -154,9 +166,9 @@
 }
 
 .completed {
-	background-color: #F8F8F8;
+	background-color: #f8f8f8;
 	&__title {
-		font-family: 'Poppins', sans-serif;
+		font-family: "Poppins", sans-serif;
 		margin: 0 auto;
 		padding: 87px 0;
 		max-width: 821px;
@@ -203,6 +215,9 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: 1300px) {
+			flex-direction: column;
+		}
 	}
 }
 
@@ -215,6 +230,9 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: flex-start;
+	@media (max-width: 1300px) {
+		margin-top: 50px;
+	}
 	&__img {
 		position: absolute;
 		left: -61px;
@@ -231,12 +249,12 @@
 			position: absolute;
 			top: 34px;
 			right: 24px;
-			font-family: 'Basic Sans SF', sans-serif;
+			font-family: "Basic Sans SF", sans-serif;
 			font-style: normal;
 			font-weight: bold;
 			font-size: 96px;
 			line-height: 58px;
-			color: #B0855B;
+			color: #b0855b;
 		}
 	}
 	&__name {
@@ -259,9 +277,9 @@
 	text-align: center;
 	padding-top: 93px;
 	padding-bottom: 122px;
-	background: #F8F8F8;
+	background: #f8f8f8;
 	&__subtitle {
-		margin: 0 auto;	
+		margin: 0 auto;
 	}
 	&__title {
 		padding-top: 21px;
@@ -273,10 +291,16 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: 1250px) {
+			flex-direction: column;
+		}
 	}
 }
 
 .news-item {
+	@media (max-width: 1250px) {
+		padding-top: 50px;
+	}
 	text-align: left;
 	&__title {
 		padding-top: 60px;
@@ -303,7 +327,7 @@
 		margin: 0 auto;
 		max-width: 461px;
 		height: 0;
-		border-top: 1px solid #C4C4C4;
+		border-top: 1px solid #c4c4c4;
 	}
 	&__text {
 		margin: 0 auto;
@@ -318,7 +342,7 @@
 		padding-left: 27px;
 		box-sizing: border-box;
 		border: 0;
-		background: #EEEEEE;
+		background: #eeeeee;
 		border-radius: 20px 0px 0px 0px;
 		font-weight: 500;
 		font-size: 18px;
@@ -339,7 +363,7 @@
 }
 .footer {
 	padding-top: 93px;
-	background: #F8F8F8;
+	background: #f8f8f8;
 	&__inner {
 		display: flex;
 		justify-content: space-between;
@@ -360,7 +384,7 @@
 		margin: 0 auto;
 		max-width: 100%;
 		height: 0;
-		border-top: 1px solid #C4C4C4;
+		border-top: 1px solid #c4c4c4;
 	}
 	&__copyright {
 		margin: 0;
@@ -368,7 +392,7 @@
 		padding-bottom: 22px;
 		text-align: center;
 		a {
-			color:#37806B;
+			color: #37806b;
 			text-decoration: none;
 		}
 	}
@@ -404,11 +428,11 @@
 		margin-right: 8px;
 		width: 37px;
 		height: 37px;
-		background: #D5D5D5;
+		background: #d5d5d5;
 		border-radius: 50%;
 		&:hover {
-			background: #37806B;
-			transition: ease .7s;
+			background: #37806b;
+			transition: ease 0.7s;
 		}
 	}
 	&__fb {
