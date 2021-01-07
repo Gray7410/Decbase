@@ -13,6 +13,10 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		@media (max-width: 515px) {
+			padding-bottom: 50px;
+			padding-top: 10px;
+		}
 	}
 	&__title {
 		max-width: 549px;
@@ -85,7 +89,7 @@
 	position: absolute;
 	right: -320px;
 	top: 0;
-	padding-top: 120px;
+	padding-top: 80px;
 	height: 100%;
 	width: 320px;
 	background-color: rgba( #caa892, 0.95);
