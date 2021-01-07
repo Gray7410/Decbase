@@ -400,13 +400,20 @@
 	padding-top: 93px;
 	padding-bottom: 122px;
 	background: #f8f8f8;
+	@media (max-width: 515px) {
+		padding-top: 50px;
+	}
 	&__subtitle {
 		margin: 0 auto;
 	}
 	&__title {
 		padding-top: 21px;
+		@media (max-width: 515px) {
+			padding-top: 0;
+		}
 	}
 	&__list {
+		padding: 0;
 		margin: 0;
 		padding-top: 82px;
 		list-style: none;
@@ -433,6 +440,10 @@
 		font-size: 30px;
 		line-height: 28px;
 		color: #212121;
+		@media (max-width: 515px) {
+			padding-top: 20px;
+			font-size: 24px;
+		}
 	}
 	&__text {
 		margin: 0;
@@ -445,8 +456,8 @@
 	padding-bottom: 192px;
 	text-align: center;
 	@media (max-width: 515px) {
-		padding-top: 70px;
-		padding-bottom: 70px;
+		padding-top: 50px;
+		padding-bottom: 50px;
 	}
 	&__title {
 		text-transform: uppercase;
