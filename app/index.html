@@ -23,6 +23,21 @@
 						<li class="header-nav__item"><a href="#" class="header-nav__btn">Sign Up</a></li>
 					</ul>
 				</nav>
+				<div class="header__burger-wrap">
+					<div id="menu-toggle" class="header__burger-icon"></div>
+				</div>
+				<div id="mobile-nav" class="mobile-nav">
+					<ul class="mobile-nav__list">
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Home</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Project</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Services</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">About</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Blog</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Shop</a></li>
+						<li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Contact</a></li>
+						<li class="mobile-nav__item"><a href="#" class="block__btn">Sign Up</a></li>
+					</ul>
+				</div>
 			</div>
 			<div class="block">
 				<div class="block__inner inner">
@@ -162,7 +177,7 @@
 							<a href="" class="block__btn">Learn more</a>
 						</div>
 						<div class="block__content">
-							<img src="img/about-us.png" width="681" alt="About us">
+							<img class="block__img" src="img/about-us.png" width="681" alt="About us">
 						</div>
 					</div>
 				</div>
@@ -176,7 +191,7 @@
 							<a href="" class="block__btn">Read more</a>
 						</div>
 						<div class="block__content">
-							<img src="img/20-years-working.png" alt="">
+							<img class="block__img" src="img/20-years-working.png" alt="">
 						</div>
 					</div>
 				</div>
@@ -185,21 +200,21 @@
 		<section class="completed">
 			<div class="inner">
 				<h2 class="completed__title">3000+ Completed Work Which WE have Successfully Done</h2>
-				<ul class="completed__list">
+				<ul class="completed__list" id="counter">
 					<li class="completed__item">
-						<p class="completed__value">980</p>
+						<p class="completed__value count" data-count="980">0</p>
 						<span>Project</span>
 					</li>
 					<li class="completed__item">
-						<p class="completed__value">520</p>
+						<p class="completed__value count" data-count="520">0</p>
 						<span>Happy Client</span>
 					</li>
 					<li class="completed__item">
-						<p class="completed__value">330</p>
+						<p class="completed__value count" data-count="330">0</p>
 						<span>Winners</span>
 					</li>
 					<li class="completed__item">
-						<p class="completed__value">120</p>
+						<p class="completed__value count" data-count="120">0</p>
 						<span>Recoment</span>
 					</li>
 				</ul>

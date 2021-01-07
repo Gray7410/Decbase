@@ -4,6 +4,8 @@
 @import "global";
 
 .header {
+	position: relative;
+	overflow: hidden;
 	&__menu {
 		height: 47px;
 		padding-top: 34px;
@@ -19,13 +21,100 @@
 		font-size: 72px;
 		line-height: 78px;
 		color: #212121;
+		@media (max-width: 515px) {
+			font-size: 42px;
+			line-height: 50px;
+		}
 	}
 	&__text {
 		max-width: 603px;
 	}
+	&__burger-wrap {
+		display: none;
+		@media (max-width: 1050px) {
+			display: block;
+		}
+	}
+	&__burger-icon {
+		z-index: 20;
+		position: relative;
+		width: 30px;
+		height: 5px;
+		background-color:#212121;
+		&::before {
+			position: absolute;
+			top: -10px;
+			content: '';
+			width: 30px;
+			height: 5px;
+			background-color: #212121;
+			transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+		}
+		&::after {
+			position: absolute;
+			top: 10px;
+			content: '';
+			width: 30px;
+			height: 5px;
+			background-color:#212121;
+			transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+		}
+	}
+	&__burger--active {
+		background-color: transparent;
+		&::before {
+			transform: rotate(45deg);
+			top: 0;
+			transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+			background-color: #212121;
+		}
+		&::after {
+			transform: rotate(-45deg);
+			top: 0;
+			transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+			background-color: #212121;
+		}
+	}
+}
+
+.mobile-nav {
+	text-align: center;
+	box-sizing: border-box;
+	z-index: 10;
+	display: block;
+	position: absolute;
+	right: -320px;
+	top: 0;
+	padding-top: 120px;
+	height: 100%;
+	width: 320px;
+	background-color: rgba( #caa892, 0.95);
+	transition: transform 0.4s ease-in;
+	&--active {
+		transform: translateX(-100%);
+	}
+	&__list {
+		padding: 0;
+		margin: 0;
+		list-style-type: none;
+	}
+	&__item{
+		padding-bottom: 30px;
+	}
+	&__link {
+		font-size: 22px;
+		color: #212121;
+		text-decoration: none;
+		&:hover {
+			color: #646464;
+		}
+	}
 }
 
 .header-nav {
+	@media (max-width:1050px) {
+		display: none;
+	}
 	&__list {
 		display: flex;
 		justify-content: space-between;
@@ -72,7 +161,10 @@
 	}
 	#slider-logo {
 		fill: #ffffff;
-	}
+		@media (max-width: 515px) {
+			display: none;
+		}
+		}
 }
 
 .service-slider {
@@ -130,10 +222,12 @@
 		justify-content: space-between;
 		align-items: center;
 		min-width: 0;
+		@media (max-width: 515px) {
+			padding-top: 0;
+			padding-bottom: 50px;
+		}
 	}
 	&__item {
-		// display: flex;
-		// align-items: start;
 		padding-top: 40px;
 		padding-left: 37px;
 		box-sizing: border-box;
@@ -142,18 +236,24 @@
 		min-height: 193px;
 		box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.14);
 		border-radius: 60px 0px;
+		@media (max-width: 515px) {
+			padding-left: 0;
+			max-width: 240px;
+		}
 	}
 	&__info {
 		padding-left: 60px;
 		margin-top: -40px;
+		@media (max-width: 515px) {
+			padding-left: 20px;
+			margin-top: 0;
+		}
 	}
 	&__title {
+		display: inline-block;
 		font-size: 24px;
 		line-height: 16px;
 		color: #212121;
-		&--active {
-			color: #ffffff;
-		}
 	}
 	&__text {
 		line-height: 28px;
@@ -163,6 +263,9 @@
 
 .about {
 	padding-bottom: 224px;
+	@media (max-width: 515px) {
+		padding-bottom: 30px;
+	}
 }
 
 .completed {
@@ -177,12 +280,20 @@
 		line-height: 60px;
 		text-align: center;
 		color: #212121;
+		@media (max-width: 515px) {
+			font-size: 30px;
+			padding: 40px 0;
+		}
 	}
 	&__list {
 		list-style: none;
 		display: flex;
 		justify-content: space-between;
 		padding-bottom: 105px;
+		@media (max-width: 860px) {
+			flex-direction: column;
+			align-items: center;
+		}
 	}
 	&__item {
 		width: 185px;
@@ -193,6 +304,9 @@
 			display: block;
 			text-align: center;
 			font-weight: bold;
+		}
+		@media (max-width: 860px) {
+			margin-top: 50px;
 		}
 	}
 	&__value {
@@ -209,21 +323,29 @@
 .testimonials {
 	padding-top: 163px;
 	text-align: center;
+	@media (max-width: 515px) {
+		padding-top: 50px;
+	}
 	&__list {
 		padding-top: 99px;
 		padding-bottom: 183px;
+		margin-left: 20px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
 		@media (max-width: 1300px) {
 			flex-direction: column;
 		}
+		@media (max-width: 515px) {
+			padding-top: 0px;
+			padding-bottom: 70px;
+		}
 	}
 }
 
 .review {
 	position: relative;
-	width: 571px;
+	max-width: 571px;
 	min-height: 226px;
 	box-shadow: 7px 7px 30px 5px rgba(66, 96, 84, 0.15);
 	border-radius: 70px 0px;
@@ -294,6 +416,9 @@
 		@media (max-width: 1250px) {
 			flex-direction: column;
 		}
+		@media (max-width: 515px) {
+			padding-top: 0;
+		}
 	}
 }
 
@@ -319,6 +444,10 @@
 	padding-top: 197px;
 	padding-bottom: 192px;
 	text-align: center;
+	@media (max-width: 515px) {
+		padding-top: 70px;
+		padding-bottom: 70px;
+	}
 	&__title {
 		text-transform: uppercase;
 		padding-bottom: 37px;
@@ -348,6 +477,13 @@
 		font-size: 18px;
 		line-height: 55px;
 		color: #646464;
+		@media (max-width: 860px) {
+			width: 300px;
+		}
+		@media (max-width: 504px) {
+			border-radius: 20px 0px 20px 0px;
+			margin-bottom: 15px;
+		}
 	}
 	&__btn {
 		cursor: pointer;
@@ -359,15 +495,24 @@
 		height: 50px;
 		border: 0;
 		border-radius: 0px 0px 20px 0px;
+		@media (max-width: 504px) {
+			border-radius: 20px 0px 20px 0px;
+		}
 	}
 }
 .footer {
 	padding-top: 93px;
 	background: #f8f8f8;
+	@media (max-width: 515px) {
+		padding-top: 70px;
+	}
 	&__inner {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		@media (max-width: 1050px) {
+			flex-direction: column;
+		}
 	}
 	&__logo {
 		max-width: 350px;
@@ -375,10 +520,16 @@
 	&__text {
 		padding-top: 15px;
 		margin: 0;
+		// @media (max-width: 1050px) {
+		// 	max-width: 200px;
+		// }
 	}
 	&__menu {
 		padding-right: 10px;
 		padding-bottom: 69px;
+		@media (max-width: 1050px) {
+			padding-bottom: 0;
+		}
 	}
 	&__line {
 		margin: 0 auto;
@@ -408,6 +559,11 @@
 		font-size: 24px;
 		line-height: 40px;
 		color: #212121;
+		@media (max-width: 1050px) {
+			&:first-child{
+				padding-top: 50px;
+			}
+		}
 	}
 	&__item {
 		padding-top: 10px;
@@ -423,6 +579,9 @@
 	margin: 0;
 	padding: 0;
 	display: flex;
+	@media (max-width: 1050px) {
+		padding-bottom: 50px;
+	}
 	&__link {
 		display: block;
 		margin-right: 8px;
